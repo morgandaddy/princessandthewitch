@@ -19,6 +19,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
 @keyframes emberRise{0%{transform:translateY(0) translateX(0) scale(1);opacity:0;}8%{opacity:1;}88%{opacity:1;}100%{transform:translateY(-106vh) translateX(26px) scale(.4);opacity:0;}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
 @keyframes twinkle{0%,100%{opacity:.22;}50%{opacity:.95;}}
+    @media(max-width:680px){.book-article{grid-template-columns:1fr !important;}.book-cover-wrap{order:0 !important;max-width:260px !important;margin:0 auto;}.book-text{order:1 !important;}}
 </style>
 </helmet>
 <div style="position:relative;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;background:#0a0612;color:#ece4d6;font-family:'EB Garamond',Georgia,serif;">
@@ -82,10 +83,9 @@ html,body{margin:0;padding:0;background:#0a0612;}
             <p style="max-width:600px;margin:22px auto 0;font-size:19px;line-height:1.7;color:#cdc0d6;font-style:italic;">Every story Morgan hears at bedtime is a dispatch from a real place.</p>
           </div>
 
-          <article style="display:grid;grid-template-columns:320px 1fr;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
-            <div style="display:flex;justify-content:center;"><img src="covers/01-the-sad-glimwick.jpg" alt="The Sad Glimwick cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
-            <div>
-              <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">Book One</div>
+          <article class="book-article" style="display:grid;grid-template-columns:320px 1fr;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
+            <div class="book-cover-wrap" style="display:flex;justify-content:center;"><img src="covers/01-the-sad-glimwick.jpg" alt="The Sad Glimwick cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
+            <div class="book-text" style="order:1;">
               <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">The Sad Glimwick</h2>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">When four-year-old Morgan is visited in the night by a beautiful lady named Seraphina, she learns something extraordinary &mdash; she is a true princess of the royal blood, and that means she gets a guardian.</p>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Enter Gretchen: a young witch with magnificent white robes, a hat that tilts slightly to one side, and magic that is almost certainly under control. Together they fly by broomstick to a faraway land called Vaelmere &mdash; a place of ancient forests, dancing northern lights, and creatures made entirely of living light.</p>
@@ -118,10 +118,9 @@ html,body{margin:0;padding:0;background:#0a0612;}
             </div>
           </div>
 
-          <article style="display:grid;grid-template-columns:1fr 320px;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
-            <div style="order:2;display:flex;justify-content:center;"><img src="covers/02-the-day-gretchen-lost-her-hat.jpg" alt="The Day Gretchen Lost Her Hat cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
-            <div style="order:1;">
-              <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">Book Two</div>
+          <article class="book-article" style="display:grid;grid-template-columns:1fr 320px;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
+            <div class="book-cover-wrap" style="order:2;display:flex;justify-content:center;"><img src="covers/02-the-day-gretchen-lost-her-hat.jpg" alt="The Day Gretchen Lost Her Hat cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
+            <div class="book-text" style="order:1;">
               <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">The Day Gretchen Lost Her Hat</h2>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Gretchen is a good witch. She&rsquo;s perfectly in control. She just needs to go back to Vaelmere to get her hat.</p>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Morgan and Gretchen return to Vaelmere &mdash; this time to the kingdom of Auvenmere and the castle Palais de Saincte-Croix. Morgan meets a new princess, makes new friends, and finds a magical creature in the garden. But someone is waiting in the older trees: someone tall, with dark eyes and an accent Morgan can&rsquo;t place, who calls himself the Count.</p>
@@ -154,8 +153,8 @@ html,body{margin:0;padding:0;background:#0a0612;}
             </div>
           </div>
 
-          <article style="display:grid;grid-template-columns:320px 1fr;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
-            <div style="display:flex;justify-content:center;"><img src="covers/03-the-too-magic-carpet.jpg" alt="The Too-Magic Carpet cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
+          <article class="book-article" style="display:grid;grid-template-columns:320px 1fr;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
+            <div class="book-cover-wrap" style="display:flex;justify-content:center;"><img src="covers/03-the-too-magic-carpet.jpg" alt="The Too-Magic Carpet cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
             <div>
               <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">Book Three</div>
               <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">The Too-Magic Carpet</h2>
