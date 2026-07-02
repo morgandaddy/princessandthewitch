@@ -20,6 +20,14 @@ html,body{margin:0;padding:0;background:#0a0612;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
 @keyframes twinkle{0%,100%{opacity:.22;}50%{opacity:.95;}}
     @media(max-width:680px){.book-article{grid-template-columns:1fr !important;}.book-cover-wrap{order:0 !important;max-width:260px !important;margin:0 auto;}.book-text{order:1 !important;}}
+    @media(max-width:720px){
+      .lore-world-intro{grid-template-columns:1fr !important;}
+      .lore-world-intro .map-placeholder{display:none;}
+      .lore-three-col{grid-template-columns:1fr !important;}
+      .lore-two-halves{grid-template-columns:1fr !important;}
+      .lore-seraphina{grid-template-columns:80px 1fr !important;}
+      .lore-calendar{padding:20px 18px !important;}
+    }
 </style>
 </helmet>
 <div style="position:relative;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;background:#0a0612;color:#ece4d6;font-family:'EB Garamond',Georgia,serif;">
@@ -97,15 +105,15 @@ html,body{margin:0;padding:0;background:#0a0612;}
           <!-- Book 1 artwork strip -->
           <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin:0;overflow:hidden;border-radius:6px;border:1px solid rgba(200,164,92,.15);">
             <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-              <img src="uploads/Book1_1.jpg" alt="Seraphina visits Morgan" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s ease;" style-hover="transform:scale(1.04);" />
+              <img src="uploads/Book1_1.png" alt="Seraphina visits Morgan" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s ease;" style-hover="transform:scale(1.04);" />
               <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(to top,rgba(10,6,18,.85),transparent);font-family:'Cinzel',serif;font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:rgba(236,228,214,.6);">The First Visit</div>
             </div>
             <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-              <img src="uploads/Book1_2.jpg" alt="Gretchen arrives" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s ease;" style-hover="transform:scale(1.04);" />
+              <img src="uploads/Book1_2.png" alt="Gretchen arrives" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s ease;" style-hover="transform:scale(1.04);" />
               <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(to top,rgba(10,6,18,.85),transparent);font-family:'Cinzel',serif;font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:rgba(236,228,214,.6);">Gretchen&rsquo;s Arrival</div>
             </div>
             <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-              <img src="uploads/Book1_3.jpg" alt="The first spell" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s ease;" style-hover="transform:scale(1.04);" />
+              <img src="uploads/Book1_3.png" alt="The first spell" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s ease;" style-hover="transform:scale(1.04);" />
               <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(to top,rgba(10,6,18,.85),transparent);font-family:'Cinzel',serif;font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:rgba(236,228,214,.6);">The First Spell</div>
             </div>
             <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
@@ -224,7 +232,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
           <sc-if value="{{ isLoreWorld }}" hint-placeholder-val="{{ true }}">
             <div style="max-width:960px;margin:0 auto;padding:64px 32px 80px;">
 
-              <div style="display:grid;grid-template-columns:1fr minmax(0,340px);gap:clamp(36px,5vw,72px);align-items:start;margin-bottom:72px;">
+              <div class="lore-world-intro" style="display:grid;grid-template-columns:1fr minmax(0,340px);gap:clamp(36px,5vw,72px);align-items:start;margin-bottom:72px;">
                 <div>
                   <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:#c8a45c;margin-bottom:16px;">A World of Its Own</div>
                   <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(24px,3.2vw,38px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">A World Complete</h2>
@@ -237,16 +245,21 @@ html,body{margin:0;padding:0;background:#0a0612;}
                 </div>
               </div>
 
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:60px;">
+              <div class="lore-three-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:60px;">
                 <div style="border-top:1px solid rgba(200,164,92,.35);padding-top:24px;">
+                  <img src="uploads/hierarchy.JPEG" alt="The Stones" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 30%;border-radius:2px;margin-bottom:14px;display:block;" />
                   <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">The Divine Order</div>
                   <p style="font-size:15.5px;line-height:1.78;color:#b0a4b8;margin:0;">Seraphina oversees the realms &mdash; immortal, angelic, of a nature that exceeds any simple category. She is not God. She sits below beings she can feel the weight of but not fully see. Below her: six bloodlines she chose long ago. Beside her, in a category of her own: a great white wolf who answers to no one.</p>
                 </div>
                 <div style="border-top:1px solid rgba(200,164,92,.35);padding-top:24px;">
+                  <img src="uploads/magic.PNG" alt="A souk in Dilarah" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 40%;border-radius:2px;margin-bottom:14px;display:block;" />
                   <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">Magic</div>
-                  <p style="font-size:15.5px;line-height:1.78;color:#b0a4b8;margin:0;">Magic is real in all realms of Vaelmere. The ability to wield it is rare. Most of the princesses cannot use it at all. Even those with natural aptitude find it difficult to master &mdash; as Gretchen&rsquo;s many spectacular miscasts demonstrate daily. The moment it becomes easy or routine, the stakes vanish.</p>
+                  <p style="font-size:15.5px;line-height:1.78;color:#b0a4b8;margin:0 0 11px;">Magic is part of the very fabric of existence in Vaelmere. In the souks of Al-Sahra you may see floating fruit, enchanted water creatures rising from fountains, carpets that answer to their owners. In The Eldenmere, the faelin put on shows in the night sky that draw visitors from across the entire world. In Frosthavn, every torch and lamp burns blue when Seraphina is present in the realm.</p>
+                  <p style="font-size:15.5px;line-height:1.78;color:#b0a4b8;margin:0 0 11px;">It is said that the most powerful magic was born in the sacred forest of Caillmor and sleeps still &mdash; until two children someday remember how to wake it. Scholars are divided on whether this is prophecy or poetic license from a bard who has seen too many faelin shows.</p>
+                  <p style="font-size:15.5px;line-height:1.78;color:#b0a4b8;margin:0;">The ability to <em>wield</em> magic deliberately is considerably rarer. Witches exist but in modest numbers, and most are unfortunately dark ones. None of the current Princess-Sovereigns possess significant magical powers &mdash; except for Maren&rsquo;s empathic gifts. Yet the presence of an anointed princess is often described as noticeably different: a warmth in her company, objects in her palace behaving in small enchanted ways. Flowers sometimes bloom in Caillmor when Elowen is near &mdash; though whether the cause is Elowen or her Ancient Race companion remains an open question.</p>
                 </div>
                 <div style="border-top:1px solid rgba(200,164,92,.35);padding-top:24px;">
+                  <img src="uploads/princesstitle.PNG" alt="Sigrid crowning Astrid" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 20%;border-radius:2px;margin-bottom:14px;display:block;" />
                   <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">On the Title &ldquo;Princess&rdquo;</div>
                   <p style="font-size:15.5px;line-height:1.78;color:#b0a4b8;margin:0;">The rulers of Vaelmere&rsquo;s kingdoms are sovereign in every practical sense. By any conventional definition they are queens. They call themselves princesses &mdash; an act of cultural deference to Seraphina and to what lies above her. To call yourself queen in Vaelmere is to declare yourself the final authority. The six have always known they are not.</p>
                 </div>
@@ -254,7 +267,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
 
               <div style="border:1px solid rgba(236,228,214,.09);border-radius:3px;padding:28px 32px;background:rgba(255,255,255,.018);margin-bottom:28px;">
                 <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">The Collapse of the Bridge</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+                <div class="lore-two-halves" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
                   <div>
                     <div style="font-family:'Cinzel',serif;font-size:11px;font-weight:600;letter-spacing:.18em;color:#ece4d6;margin-bottom:10px;">Earth &mdash; Without the Bridge</div>
                     <p style="font-size:15.5px;line-height:1.78;color:#b0a4b8;margin:0;">When the portals collapsed, the branch of humanity on Earth was cut off entirely. No magic. No sacred bloodlines to tend. No bridge back. What developed in its place was built from nothing but restless, incomplete, brilliant minds &mdash; cities visible from the stars, medicine that would look like sorcery in Vaelmere, eight billion people connected by will alone. Earth&rsquo;s intellect was not a gift. It was necessity, made magnificent.</p>
@@ -274,7 +287,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
                 <p style="font-size:16px;line-height:1.76;color:#b0a4b8;margin:0;">All dates in Vaelmere&rsquo;s recorded history are given in <em>AB</em> &mdash; After the Banishment. The founding event of the world&rsquo;s recorded history was not the building of its kingdoms but the exile of the race that preceded them. The story opens in <strong style="color:#ece4d6;font-weight:500;">980 AB</strong>. The millennium falls in <strong style="color:#ece4d6;font-weight:500;">1000 AB</strong>, twenty years later &mdash; when Morgan is twenty-four years old, and whatever has been building since Year 0 arrives at last.</p>
               </div>
 
-              <div style="display:grid;grid-template-columns:130px 1fr;gap:28px;align-items:start;">
+              <div class="lore-seraphina" style="display:grid;grid-template-columns:130px 1fr;gap:28px;align-items:start;">
                 <img src="uploads/seraphina.png" alt="Seraphina" style="aspect-ratio:3/4;width:130px;object-fit:cover;object-position:center 15%;border:1px solid rgba(200,164,92,.25);border-radius:3px;display:block;flex-shrink:0;" />
                 <div>
                   <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:#c8a45c;margin-bottom:8px;">Guardian of All</div>
@@ -599,6 +612,16 @@ html,body{margin:0;padding:0;background:#0a0612;}
                       <h4 style="font-family:'Cinzel',serif;font-weight:600;font-size:16px;line-height:1.2;margin:0 0 3px;color:#f3ecdd;">Kaia</h4>
                       <div style="font-size:12px;color:#9a8fa6;font-style:italic;margin-bottom:10px;">Heiress Presumptive &middot; House Veldric</div>
                       <p style="font-size:14px;line-height:1.76;color:#9a8fa6;margin:0;">Equally beautiful and, those who know both women will tell you, considerably more approachable. Beloved in the Rimefell for a gentle and cheerful nature that has nothing to do with the throne &mdash; and never has. She is recently engaged and looking forward, with undisguised relief, to the day she stops being a heartbeat from succession. If only her sister would produce an heir.</p>
+                    </div>
+                  </div>
+
+                  <div style="display:grid;grid-template-columns:100px 1fr;gap:16px;align-items:start;border:1px solid rgba(236,228,214,.1);border-radius:3px;padding:20px;background:rgba(255,255,255,.014);">
+                    <img src="uploads/conall.JPEG" alt="Conall" style="aspect-ratio:3/4;width:100px;object-fit:cover;object-position:center top;border-radius:2px;border:1px solid rgba(200,164,92,.2);display:block;" />
+                    <div>
+                      <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#c8a45c;margin-bottom:5px;">The Eldenmere</div>
+                      <h4 style="font-family:'Cinzel',serif;font-weight:600;font-size:16px;line-height:1.2;margin:0 0 3px;color:#f3ecdd;">Conall mac Diarmait</h4>
+                      <div style="font-size:12px;color:#9a8fa6;font-style:italic;margin-bottom:10px;">Father of the Sovereign &middot; Prince of the Realm</div>
+                      <p style="font-size:14px;line-height:1.76;color:#9a8fa6;margin:0;">Father of Princess-Sovereign Elowen and widower of the late Princess-Sovereign Bronwen. Born a commoner, raised to Prince of the Realm by marriage &mdash; a title he wears lightly. He continued working as a Master Forest Ranger throughout, and knows Caillmor as well as he knows the palace, perhaps better. He was no doubt instrumental in cultivating Elowen&rsquo;s deep love of the forest and its creatures.</p>
                     </div>
                   </div>
 
