@@ -35,7 +35,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
   <nav style="position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(20px,5vw,58px);">
     <button onClick="{{ goHome }}" style="background:none;border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:18px;font-weight:600;letter-spacing:.42em;color:#c8a45c;padding:0 0 0 .42em;">VAELMERE</button>
     <div style="display:flex;align-items:center;gap:clamp(16px,3vw,38px);">
-      <button onClick="{{ goChildren }}" style="background:none;border:none;cursor:pointer;color:#cabfce;font-family:'EB Garamond',serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;flex-direction:column;align-items:center;gap:7px;padding:0;" style-hover="color:#e7cf95;">Picture Books<sc-if value="{{ isChildren }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:20px;height:1px;background:#c8a45c;"></span></sc-if></button>
+      <button onClick="{{ goChildren }}" style="background:none;border:none;cursor:pointer;color:#cabfce;font-family:'EB Garamond',serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;flex-direction:column;align-items:center;gap:7px;padding:0;" style-hover="color:#e7cf95;">Storybooks<sc-if value="{{ isChildren }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:20px;height:1px;background:#c8a45c;"></span></sc-if></button>
       <button onClick="{{ goLore }}" style="background:none;border:none;cursor:pointer;color:#cabfce;font-family:'EB Garamond',serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;flex-direction:column;align-items:center;gap:7px;padding:0;" style-hover="color:#e7cf95;">The Lore<sc-if value="{{ isLore }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:20px;height:1px;background:#c8a45c;"></span></sc-if></button>
       <button onClick="{{ goAbout }}" style="background:none;border:none;cursor:pointer;color:#cabfce;font-family:'EB Garamond',serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;flex-direction:column;align-items:center;gap:7px;padding:0;" style-hover="color:#e7cf95;">About<sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:20px;height:1px;background:#c8a45c;"></span></sc-if></button>
     </div>
@@ -53,7 +53,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
           <div style="font-family:'Cinzel',serif;font-size:clamp(13px,1.4vw,17px);letter-spacing:.44em;color:#cdbfd4;margin-top:34px;text-transform:uppercase;padding-left:.44em;">The World of Vaelmere</div>
           <p style="max-width:540px;font-size:clamp(17px,2vw,21px);line-height:1.7;color:#c3b6cb;margin:34px auto 0;font-style:italic;">Every bedtime story is real somewhere.</p>
           <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:48px;">
-            <button onClick="{{ goChildren }}" style="padding:17px 34px;background:#c8a45c;color:#1a1024;border:none;border-radius:2px;cursor:pointer;font-family:'Cinzel',serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 10px 36px rgba(200,164,92,.28);" style-hover="background:#e7cf95;">Enter the Picture Books</button>
+            <button onClick="{{ goChildren }}" style="padding:17px 34px;background:#c8a45c;color:#1a1024;border:none;border-radius:2px;cursor:pointer;font-family:'Cinzel',serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 10px 36px rgba(200,164,92,.28);" style-hover="background:#e7cf95;">Enter the Storybooks</button>
             <button onClick="{{ goLore }}" style="padding:17px 34px;background:transparent;color:#ece4d6;border:1px solid rgba(236,228,214,.35);border-radius:2px;cursor:pointer;font-family:'Cinzel',serif;font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;" style-hover="border-color:#c8a45c;color:#e7cf95;">The Deeper Lore</button>
           </div>
           <div style="margin-top:54px;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:#8a7d96;">Three tales out now &middot; The deeper lore coming soon</div>
@@ -81,24 +81,27 @@ html,body{margin:0;padding:0;background:#0a0612;}
     </sc-if>
 
     <sc-if value="{{ isChildren }}" hint-placeholder-val="{{ false }}">
-      <section data-screen-label="Picture Books" style="position:relative;animation:fadeUp .7s ease both;">
+      <section data-screen-label="Storybooks" style="position:relative;animation:fadeUp .7s ease both;">
         <div style="position:absolute;inset:0;background:radial-gradient(110% 80% at 50% 116%, rgba(231,207,149,.16), transparent 60%),linear-gradient(180deg,#15102a 0%,#241a36 52%,#3a2942 100%);z-index:0;"></div>
         {{ warmAtmosphere }}
         <div style="position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:72px 32px 96px;">
           <div style="text-align:center;margin-bottom:24px;">
             <div style="font-family:'Cinzel',serif;font-size:12px;font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:#c8a45c;">The Princess &amp; the Witch</div>
-            <h1 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(34px,5vw,60px);line-height:1.08;margin:18px 0 0;color:#f3ecdd;">Three Tales from Vaelmere</h1>
+            <h1 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(34px,5vw,60px);line-height:1.08;margin:18px 0 0;color:#f3ecdd;">Tales from Vaelmere</h1>
             <p style="max-width:600px;margin:22px auto 0;font-size:19px;line-height:1.7;color:#cdc0d6;font-style:italic;">A little girl from our world. Her very own witch. Every bedtime story is real somewhere.</p>
-            <p style="max-width:640px;margin:22px auto 0;font-size:16px;line-height:1.75;color:#b0a4b8;">The Princess and the Witch is a read-aloud storybook series about Morgan &mdash; four years old, from our world &mdash; and Gretchen, the good witch who watches over her. Together they visit Vaelmere, a world of six kingdoms, real princesses, and forests that pay attention. Written to be read aloud: the little ones get the adventure, and the grown-ups get the story underneath the story.</p>
+            <p style="max-width:640px;margin:22px auto 0;font-size:16px;line-height:1.75;color:#b0a4b8;">The Princess and the Witch is a series of illustrated fantasy storybooks for children and family read-aloud &mdash; longer than a picture book, warmer than a chapter book, and written to be performed. Morgan is four years old and entirely from our world. Gretchen is the good witch who watches over her. (She&rsquo;s still getting the hang of the good part.) Together they visit Vaelmere: a world of six kingdoms, real princesses, and forests that pay attention.</p>
+            <p style="max-width:640px;margin:18px auto 0;font-size:16px;line-height:1.75;color:#b0a4b8;">Each storybook is a complete adventure and an honest bedtime&rsquo;s worth of reading &mdash; a proper twenty minutes aloud, with room for voices. The little ones get the monkeys, the flying brooms, and the crab named Henry. The grown-ups get the story underneath the story. And nobody has to read the same eight pages for the ninetieth night in a row.</p>
+            <p style="max-width:640px;margin:18px auto 0;font-size:15px;line-height:1.7;color:#9a8fa6;font-style:italic;">Best to read from the beginning &mdash; but every tale stands on its own.</p>
           </div>
 
           <article class="book-article" style="display:grid;grid-template-columns:320px 1fr;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
             <div class="book-cover-wrap" style="display:flex;justify-content:center;"><img src="covers/01-the-sad-glimwick.jpg" alt="The Sad Glimwick cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
             <div class="book-text" style="order:1;">
+              <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">Book One</div>
               <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">The Sad Glimwick</h2>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Morgan is four years old, and she is almost, nearly, just about asleep &mdash; when a sparkle that has never been in her room before seems very pleased about itself. That is how Morgan meets Seraphina, who is the opposite of frightening, and Gretchen, who is her very own witch. Well. Her good witch. She&rsquo;s still getting the hang of it.</p>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Together they fly to Vaelmere, a world where the forests listen and princesses are real &mdash; and where one small, sad creature needs exactly the kind of help only a four-year-old would think to give.</p>
-              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 26px;">A warm, funny read-aloud about first adventures, new friends, and taking good care of each other &mdash; with a little extra magic tucked between the lines for the grown-up doing the voices.</p>
+              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 26px;">A warm, funny read-aloud storybook about first adventures, new friends, and taking good care of each other &mdash; with a little extra magic tucked between the lines for the grown-up doing the voices. The shortest of the storybooks, and the right place to start.</p>
               <a href="https://www.amazon.com/dp/B0H5LT4W5H" target="_blank" rel="noopener" style="display:inline-block;padding:15px 30px;background:#c8a45c;color:#1a1024;text-decoration:none;border-radius:2px;font-family:'Cinzel',serif;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 10px 30px rgba(200,164,92,.26);" style-hover="background:#e7cf95;">Read it on Amazon &rarr;</a>
             </div>
           </article>
@@ -130,10 +133,11 @@ html,body{margin:0;padding:0;background:#0a0612;}
           <article class="book-article" style="display:grid;grid-template-columns:1fr 320px;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
             <div class="book-cover-wrap" style="order:2;display:flex;justify-content:center;"><img src="covers/02-the-day-gretchen-lost-her-hat.jpg" alt="The Day Gretchen Lost Her Hat cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
             <div class="book-text" style="order:1;">
+              <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">Book Two</div>
               <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">The Day Gretchen Lost Her Hat</h2>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">A witch&rsquo;s hat is not just a hat. Everyone knows that.</p>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">When Gretchen&rsquo;s magnificent hat goes missing, Morgan knows exactly what to do: mount the broom, fly to Vaelmere, and investigate &mdash; with the help of the kindest princess in any world, two brand-new friends, and one extremely dignified game of counting to thirty.</p>
-              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 26px;">But somewhere between the palace courtyard and a very unusual stranger in the forest, Morgan starts to learn what her witch already knows: the things we wear are not the things we are. Funny where it should be, gentle where it counts, and quietly wise everywhere else &mdash; with a clapping game your little one will demand to learn, and a scene or two the grown-up reading aloud will be thinking about after lights-out.</p>
+              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 26px;">But somewhere between the palace courtyard and a very unusual stranger in the forest, Morgan starts to learn what her witch already knows: the things we wear are not the things we are. A full-length family read-aloud &mdash; funny where it should be, gentle where it counts, and quietly wise everywhere else &mdash; with a clapping game your little one will demand to learn, and a scene or two the grown-up reading aloud will be thinking about after lights-out.</p>
               <a href="https://www.amazon.com/dp/B0H5NSV1Q9" target="_blank" rel="noopener" style="display:inline-block;padding:15px 30px;background:#c8a45c;color:#1a1024;text-decoration:none;border-radius:2px;font-family:'Cinzel',serif;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 10px 30px rgba(200,164,92,.26);" style-hover="background:#e7cf95;">Read it on Amazon &rarr;</a>
             </div>
           </article>
@@ -169,8 +173,8 @@ html,body{margin:0;padding:0;background:#0a0612;}
               <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">The Too-Magic Carpet</h2>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Some carpets fly. This one has opinions.</p>
               <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Princess-Sovereign Zahra has invited Morgan to the desert kingdom of Al-Sahra &mdash; a land of golden palaces, floating furniture, one extremely charming prince who definitely did not steal any monkeys, and a flying carpet with entirely too much magic in it.</p>
-              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">The furniture is floating. The crown will not stay on the princess&rsquo;s head. The cat has claimed the carpet and is not taking questions. Someone has to untangle this &mdash; carefully, kindly, without breaking what was good underneath.</p>
-              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 26px;">Luckily, Morgan knows a witch. The funniest adventure yet, with a warm surprise ending under the stars &mdash; and, for the grown-up reading aloud, one quiet page that says everything about how broken things get mended.</p>
+              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">The furniture is floating. The crown will not stay on the princess&rsquo;s head. The cat has claimed the carpet and is not taking questions. Someone must untangle this &mdash; carefully, kindly, without breaking what was good underneath.</p>
+              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 26px;">Luckily, Morgan knows a witch. The funniest storybook yet, with a warm surprise ending under the stars &mdash; and, for the grown-up reading aloud, one quiet page that says everything about how broken things get mended.</p>
               <a href="https://www.amazon.com/dp/B0H5NZ7JQT" target="_blank" rel="noopener" style="display:inline-block;padding:15px 30px;background:#c8a45c;color:#1a1024;text-decoration:none;border-radius:2px;font-family:'Cinzel',serif;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 10px 30px rgba(200,164,92,.26);" style-hover="background:#e7cf95;">Read it on Amazon &rarr;</a>
             </div>
           </article>
@@ -198,6 +202,18 @@ html,body{margin:0;padding:0;background:#0a0612;}
               <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(to top,rgba(10,6,18,.85),transparent);font-family:'Cinzel',serif;font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:rgba(236,228,214,.6);">The Detour</div>
             </div>
           </div>
+
+          <article class="book-article" style="display:grid;grid-template-columns:1fr 320px;gap:clamp(36px,5vw,64px);align-items:center;padding:56px 0;border-top:1px solid rgba(236,228,214,.1);">
+            <div class="book-cover-wrap" style="order:2;display:flex;justify-content:center;"><img src="covers/04-the-island-of-stars.jpg" alt="The Island of Stars cover" style="width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid rgba(200,164,92,.4);box-shadow:0 26px 64px rgba(0,0,0,.5);" /></div>
+            <div class="book-text" style="order:1;">
+              <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#c8a45c;margin-bottom:12px;">Book Four &mdash; Coming Soon</div>
+              <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 22px;color:#f3ecdd;">The Island of Stars</h2>
+              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Storybook Four. The biggest adventure yet.</p>
+              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 15px;">Gretchen arrives at the window with a very small woven hat and a very important question about snowmen &mdash; and by sunrise, Morgan is over the Southern Sea, bound for Tavakai: the island realm of reef lagoons, cloud forests, ceremonial canoes, at least one crab named Henry, and a mountain that is about to remember something it forgot a hundred years ago. The result is the most beautiful festival in Tavakai in generations, and the most spectacular storybook thus far in the series.</p>
+              <p style="font-size:17px;line-height:1.75;color:#cabdd2;margin:0 0 26px;">And it is the storybook where the series grows up a little &mdash; the longest tale so far, the most wondrous, and the first one with an ending that the grown-up doing the voices will carry to their own bed afterward.</p>
+              <div style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a7d96;">In illustration now.</div>
+            </div>
+          </article>
         </div>
       </section>
     </sc-if>
@@ -598,7 +614,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
                       <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#c8a45c;margin-bottom:5px;">Al-Sahra</div>
                       <h4 style="font-family:'Cinzel',serif;font-weight:600;font-size:16px;line-height:1.2;margin:0 0 3px;color:#f3ecdd;">Zafar</h4>
                       <div style="font-size:12px;color:#9a8fa6;font-style:italic;margin-bottom:10px;">Prince of Al-Sahra. Military commander.</div>
-                      <p style="font-size:14px;line-height:1.76;color:#9a8fa6;margin:0;">When the realm calls, he answers precisely and without theater. He asks few questions in rooms where questions are unwelcome, and exactly the right one when they are. He appeared in Book Three with a stolen-monkey problem that turned out to be considerably more serious than it looked.</p>
+                      <p style="font-size:14px;line-height:1.76;color:#9a8fa6;margin:0;">Prince of the Realm. Brother to the Sovereign. Father of the Heiress Presumptive. Experienced and highly competent soldier. Owner of several commercial ventures, both legitimate and illegitimate. Accused thief of rare Tavakaian sky monkeys. There has never been a more colorful son of House Zafari, nor a more capable one. He will need to draw on all of his talents to succeed in a desperate mission to come.</p>
                     </div>
                   </div>
 
@@ -629,6 +645,16 @@ html,body{margin:0;padding:0;background:#0a0612;}
                       <h4 style="font-family:'Cinzel',serif;font-weight:600;font-size:16px;line-height:1.2;margin:0 0 3px;color:#f3ecdd;">Rodrigo</h4>
                       <div style="font-size:12px;color:#9a8fa6;font-style:italic;margin-bottom:10px;">Vizconde Callivane y Vidal. Lyssene&rsquo;s father.</div>
                       <p style="font-size:14px;line-height:1.76;color:#9a8fa6;margin:0;">First cousin to Princess-Sovereign Calliope, with full access to Solanthis and its courts &mdash; none of which he has used in years. He chose a ranch and a quiet life over everything his bloodline entitled him to, and built it deliberately. He has raised Lyssene alone since she was eight, when her mother Celine died. He is not a man who makes that kind of choice without knowing what he is giving up.</p>
+                    </div>
+                  </div>
+
+                  <div style="display:grid;grid-template-columns:100px 1fr;gap:20px;align-items:start;border:1px solid rgba(236,228,214,.08);border-radius:3px;padding:22px;background:rgba(255,255,255,.012);">
+                    <img src="uploads/MaileMarakai.jpg" alt="Maile" style="aspect-ratio:3/4;width:100px;object-fit:cover;object-position:center top;border-radius:2px;border:1px solid rgba(200,164,92,.2);display:block;" />
+                    <div>
+                      <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#c8a45c;margin-bottom:5px;">Tavakai</div>
+                      <h4 style="font-family:'Cinzel',serif;font-weight:600;font-size:16px;line-height:1.2;margin:0 0 3px;color:#f3ecdd;">Maile Marakai</h4>
+                      <div style="font-size:12px;color:#9a8fa6;font-style:italic;margin-bottom:10px;">Princess-Mother. Naia&rsquo;s mother.</div>
+                      <p style="font-size:14px;line-height:1.76;color:#9a8fa6;margin:0;">Maile Marakai reigned for twenty years as the beloved Princess-Sovereign of Tavakai. She broke with tradition by voluntarily abdicating in favor of her daughter Naia &mdash; news that shocked the realm, until it saw what she had seen in her extraordinary daughter all along. She continues to live in Hale Moanalani with her extended family, and will give one fateful order in her daughter&rsquo;s name that might save her entire bloodline.</p>
                     </div>
                   </div>
 
