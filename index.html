@@ -57,7 +57,10 @@ html,body{margin:0;padding:0;background:#0a0612;}
             <button onClick="{{ goLore }}" style="padding:17px 34px;background:transparent;color:#ece4d6;border:1px solid rgba(236,228,214,.35);border-radius:2px;cursor:pointer;font-family:'Cinzel',serif;font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;" style-hover="border-color:#c8a45c;color:#e7cf95;">The Deeper Lore</button>
           </div>
           <div style="margin-top:54px;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:#8a7d96;">Three tales out now &middot; The deeper lore coming soon</div>
-          <button onClick="{{ goRhyme }}" style="margin-top:30px;background:none;border:none;cursor:pointer;color:#9a8fb0;font-family:'EB Garamond',serif;font-style:italic;font-size:16px;letter-spacing:.02em;border-bottom:1px solid rgba(154,143,176,.4);padding:0 0 3px;" style-hover="color:#e7cf95;border-color:#c8a45c;">Where the old things go &rarr;</button>
+          <button onClick="{{ goRhyme }}" style="margin-top:34px;background:none;border:none;cursor:pointer;text-align:center;" style-hover="opacity:.85;">
+            <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:17px;line-height:1.7;color:#c3b6cb;">&ldquo;Where do the dragons go when they&rsquo;re done?&rdquo;</div>
+            <div style="margin-top:8px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#8a7d96;border-bottom:1px solid rgba(154,143,176,.35);display:inline-block;padding-bottom:3px;">Where the Old Things Go &rarr;</div>
+          </button>
         </div>
       </section>
     </sc-if>
@@ -75,7 +78,11 @@ html,body{margin:0;padding:0;background:#0a0612;}
           <p style="font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);line-height:2;color:#ded3e4;margin:0 0 30px;">Where do the dragons go when they&rsquo;re done?<br>Over the hill, past the setting sun.<br>Where do the witches sleep when they&rsquo;re old?<br>Somewhere with stars that are not quite cold.</p>
           <p style="font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);line-height:2;color:#c3b6cb;margin:0;">Hush now, hush now, don&rsquo;t ask why&mdash;<br>some of the stars are the same in that sky</p>
           <div style="width:42px;height:1px;background:rgba(200,164,92,.5);margin:48px auto;"></div>
-          <p style="font-size:16px;line-height:1.7;color:#9b8fa6;font-style:italic;margin:0 auto;max-width:440px;">Every story told at bedtime is true&mdash;somewhere. This one half-remembers Vaelmere.</p>
+          <p style="font-size:16px;line-height:1.7;color:#9b8fa6;font-style:italic;margin:0 auto 44px;max-width:440px;">Every story told at bedtime is true&mdash;somewhere. This one half-remembers Vaelmere.</p>
+          <div style="font-family:'Cinzel',serif;font-size:11px;font-weight:500;letter-spacing:.38em;text-transform:uppercase;color:#c8a45c;margin-bottom:20px;">Vaelmere Remembers It Differently</div>
+          <h2 style="font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,2.8vw,32px);line-height:1.15;margin:0 0 34px;color:#f3ecdd;">Far Singing</h2>
+          <p style="font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(18px,2.1vw,22px);line-height:2;color:#ded3e4;margin:0 0 26px;">Where do the lost ones go when they&rsquo;re gone?<br>Past the last river, beyond the dawn.<br>Where do the broken find their rest?<br>Somewhere the same stars light the west.</p>
+          <p style="font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(18px,2.1vw,22px);line-height:2;color:#c3b6cb;margin:0;">Hush now, child, don&rsquo;t ask why&mdash;<br>we shared a sky once, you and I.</p>
         </div>
       </section>
     </sc-if>
@@ -360,7 +367,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
 
                 <div style="border:1px solid rgba(236,228,214,.1);border-radius:3px;overflow:hidden;">
                   <div style="position:relative;aspect-ratio:3/2;overflow:hidden;cursor:pointer;" onClick="{{ openEldenmere }}">
-                    <img src="uploads/eldenmere.jpg" alt="Eldenmere infographic" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;" style-hover="transform:scale(1.03);" />
+                    <img src="uploads/eldenmere.jpg?v=2" alt="Eldenmere infographic" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;" style-hover="transform:scale(1.03);" />
                     <div style="position:absolute;bottom:8px;right:10px;font-family:'Cinzel',serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(236,228,214,.55);pointer-events:none;">Click to expand</div>
                   </div>
                   <div style="padding:22px 24px 26px;">
@@ -375,7 +382,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
 
                 <div style="border:1px solid rgba(236,228,214,.1);border-radius:3px;overflow:hidden;">
                   <div style="position:relative;aspect-ratio:3/2;overflow:hidden;cursor:pointer;" onClick="{{ openAlSahra }}">
-                    <img src="uploads/alsahra.jpg" alt="Al-Sahra infographic" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;" style-hover="transform:scale(1.03);" />
+                    <img src="uploads/alsahra.jpg?v=2" alt="Al-Sahra infographic" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;" style-hover="transform:scale(1.03);" />
                     <div style="position:absolute;bottom:8px;right:10px;font-family:'Cinzel',serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(236,228,214,.55);pointer-events:none;">Click to expand</div>
                   </div>
                   <div style="padding:22px 24px 26px;">
@@ -405,7 +412,7 @@ html,body{margin:0;padding:0;background:#0a0612;}
 
                 <div style="border:1px solid rgba(236,228,214,.1);border-radius:3px;overflow:hidden;">
                   <div style="position:relative;aspect-ratio:3/2;overflow:hidden;cursor:pointer;" onClick="{{ openTavakai }}">
-                    <img src="uploads/tavakai.jpg" alt="Tavakai infographic" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;" style-hover="transform:scale(1.03);" />
+                    <img src="uploads/tavakai.jpg?v=2" alt="Tavakai infographic" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;" style-hover="transform:scale(1.03);" />
                     <div style="position:absolute;bottom:8px;right:10px;font-family:'Cinzel',serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(236,228,214,.55);pointer-events:none;">Click to expand</div>
                   </div>
                   <div style="padding:22px 24px 26px;">
@@ -1008,10 +1015,10 @@ class Component extends DCLogic {
       closeLightbox: () => this.setState({ lightboxSrc: null }),
       openRimefell: () => this.setState({ lightboxSrc: 'uploads/rimefell.jpg' }),
       openAuvenmere: () => this.setState({ lightboxSrc: 'uploads/auvenmere.jpg' }),
-      openEldenmere: () => this.setState({ lightboxSrc: 'uploads/eldenmere.jpg' }),
-      openAlSahra: () => this.setState({ lightboxSrc: 'uploads/alsahra.jpg' }),
+      openEldenmere: () => this.setState({ lightboxSrc: 'uploads/eldenmere.jpg?v=2' }),
+      openAlSahra: () => this.setState({ lightboxSrc: 'uploads/alsahra.jpg?v=2' }),
       openGoldenShore: () => this.setState({ lightboxSrc: 'uploads/goldenshore.jpg' }),
-      openTavakai: () => this.setState({ lightboxSrc: 'uploads/tavakai.jpg' }),
+      openTavakai: () => this.setState({ lightboxSrc: 'uploads/tavakai.jpg?v=2' }),
       darkAtmosphere, warmAtmosphere, starfield
     };
   }
